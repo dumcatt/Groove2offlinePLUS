@@ -1,7 +1,19 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+}
+
+// Release signing. The game APK in assets installs as an update over this app (same package),
+// so both must be signed with the same key: GC2Plus/gc2plus.keystore by default.
+// Override with a local, uncommitted keystore.properties next to settings.gradle.kts:
+//   storeFile=GC2Plus/gc2plus.keystore  (relative to the project root)
+//   storePassword=...  keyAlias=...  keyPassword=...
+val keystoreProps = Properties().apply {
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
 }
 
 android {
@@ -20,8 +32,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file(keystoreProps.getProperty("storeFile", "GC2Plus/gc2plus.keystore"))
+            storePassword = keystoreProps.getProperty("storePassword", "gc2plus")
+            keyAlias = keystoreProps.getProperty("keyAlias", "gc2plus")
+            keyPassword = keystoreProps.getProperty("keyPassword", "gc2plus")
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

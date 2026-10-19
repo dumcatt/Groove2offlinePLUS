@@ -274,7 +274,7 @@ class MainActivity : ComponentActivity() {
                             , style = MaterialTheme.typography.labelSmall
                         )
 
-                        Text("Version 4", style = MaterialTheme.typography.labelSmall)
+                        Text("Version 4 + GC2Plus",style = MaterialTheme.typography.labelSmall)
 
                     }
 

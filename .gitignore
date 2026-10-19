@@ -1,15 +1,45 @@
+# Gradle & Android Studio
 *.iml
-.gradle
+.gradle/
+.kotlin/
 /local.properties
+local.properties
+keystore.properties
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/deploymentTargetSelector.xml
+/.idea/studiobot.xml
+/build/
+app/build/
+app/release/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# OS files
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+Thumbs.db
+desktop.ini
+
+# Binary assets, APKs, archives, and third-party tools (supplied locally)
+*.apk
+*.idsig
+*.xapk
+*.xapk.part
+*.obb
+GC2Plus/original/
+GC2Plus/tools/apktool.jar
+app/src/main/assets/groovecoaster.apk
+
+# Build outputs, local backups, and signing keys
+GC2Plus/out/
+GC2Plus/save_backup/
+*.keystore
+*.jks
+*.so
+__pycache__/
+*.pyc
