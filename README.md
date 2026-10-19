@@ -22,7 +22,7 @@ Use my mod to play after the shutdown on Android! Play all the 4max expansion so
 
 - Have ~10gb of storage (to download the song data) on an Android device
 - Uninstall Groove Coaster, if you have it installed.
-- Download the xapk using [Mediafire](https://www.mediafire.com/file/1g4rub1oi3tnw6x/gc2offlinev4.xapk/file) or [Mega](https://mega.nz/file/GLAxBQKQ#_YNXkyNxYsbPsfkWnUUNZVDqqmjBLkKV8Lo6HsyDDdE) (Can't put it on GitHub, it's too heavy)
+- Download the xapk using [Mediafire](https://www.mediafire.com/file/jawpry4tpd67aez/gc2plus.xapk/file) (Can't put it on GitHub, it's too heavy)
 - Sometimes, the file will download as an `.apk.zip` file. If that's the case, rename the file to end with `.xapk` only.
 - Install the xapk using the zarchiver app
 > [!Caution]
@@ -67,12 +67,15 @@ Use my mod to play after the shutdown on Android! Play all the 4max expansion so
 
 This build of the setup app (shown as `Version 4 + GC2Plus` on its screen) installs a game APK with the GC2Plus mod built in:
 
-- **FAST / LATE popups**: after each judged note, shows whether you hit early or late.
-- **AUTO button**: the mode screen's former REPLAY button now plays the chart automatically on every difficulty. Autoplay results are **not saved** (no score, clear or rank is recorded).
-- **High framerate render interpolation**: the game still runs its logic at 60 Hz, but on 90/120/144 Hz displays the frames in between are extrapolated, so notes and the avatar move smoothly.
-- **Song search box**: a search bar on the song list screen (in both the 3D route view and 2D LIST view) filters songs live by title or artist as you type.
-- **All avatars unlocked & avatar crash fix**: fixes the original game's crash when selecting avatars #256 and above (enlarges `TuneAppMain`'s 256-slot avatar table to 1024 entries so it no longer overflows into the item/skin tables) and makes all 368 avatars selectable without modifying the save file.
-- **Gamepad controls**, modelled on Groove Coaster Wai Wai Party's standard scheme. Each half of the pad is one "booster":
+✅ FAST/LATE Judgements
+
+✅ AUTOPLAY instead of REPLAY
+
+✅ High framerate
+
+✅ Song search
+
+- **Experimental Gamepad controls**, modelled on Groove Coaster Wai Wai Party's standard scheme. Each half of the pad is one "booster":
   - Left booster: D-pad, left stick, L1/L2
   - Right booster: face buttons (top/right/bottom/left = up/right/down/left), right stick, R1/R2
   - Any button on a side is a HIT (hold for HOLD, mash for BEAT). A directional or face button also pushes toward its direction, which performs a SLIDE. Tilting a stick drags (SLIDE / SLIDE HOLD, waggle for SCRATCH). Use both sides together for CRITICAL / DUAL HOLD / DUAL SLIDE.
