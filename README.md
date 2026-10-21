@@ -22,7 +22,7 @@ Use my mod to play after the shutdown on Android! Play all the 4max expansion so
 
 - Have ~10gb of storage (to download the song data) on an Android device
 - Uninstall Groove Coaster, if you have it installed.
-- Download the xapk using [Mediafire](https://www.mediafire.com/file/jawpry4tpd67aez/gc2plus.xapk/file) (Can't put it on GitHub, it's too heavy)
+- Download the xapk using [Mediafire](https://www.mediafire.com/file/776fj7plcy7yyh0/gc2plus.xapk/file) (Can't put it on GitHub, it's too heavy)
 - Sometimes, the file will download as an `.apk.zip` file. If that's the case, rename the file to end with `.xapk` only.
 - Install the xapk using the zarchiver app
 > [!Caution]
